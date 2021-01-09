@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: assigment-default
+environment:
+  log_stdout: console
+  source_root_url: http://www.debijenkorf.nl/INTERSHOP/static/WFS/dbk-shop-Site/-/dbk-shop/nl_NL/product-images/
+  aws_s3_endpoint: xxxx:0000
+  aws_accesskey: /xxx/yyy.key
+  aws_secretkey: /xxx/yyy.key
+  logdb_endpoint: xxxx:5432
+  logdb_name: logdb
+  logdb_username: user
+  logdb_password: password
+
+---
+spring:
+  profiles: local
+  application:
+    name: AssignmentApplication
+environment:
+  log_stdout: console
+  source_root_url: http://www.debijenkorf.nl/INTERSHOP/static/WFS/dbk-shop-Site/-/dbk-shop/nl_NL/product-images/
+  aws_s3_endpoint: xxxx:0000
+  aws_accesskey: /xxx/yyy.key
+  aws_secretkey: /xxx/yyy.key
+  logdb_endpoint: xxxx:5432
+  logdb_name: logdb
+  logdb_username: user
+  logdb_password: password
+
+---
+spring:
+  profiles: prod
+  application:
+    name: assigment-prod
+environment:
+  log_stdout: database
+  source_root_url: http://www.debijenkorf.nl/INTERSHOP/static/WFS/dbk-shop-Site/-/dbk-shop/nl_NL/product-images/
+  aws_s3_endpoint: xxxx:0000
+  aws_accesskey: /xxx/yyy.key
+  aws_secretkey: /xxx/yyy.key
+  logdb_endpoint: xxxx:5432
+  logdb_name: logdb
+  logdb_username: user
+  logdb_password: password
